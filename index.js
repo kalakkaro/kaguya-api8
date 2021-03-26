@@ -1824,31 +1824,6 @@ app.get('/api/nhentai', (req, res) => {
     })
 })
 
-/*	let id = req.query.id;
-	if(!id || id == undefined)
-	return res.status(500).send({
-			status: false,
-			message: "Require Parameter id"
-		})
-	if (isNaN(Number(id))) 
-	return res.send({
-		Pesan : "Code Harus Berupa Angka"
-	})
-	if (id.length > 6) 
-	return res.send({
-		Pesan : "Maximal 6 Angka"
-	})
-	let key = req.query.key;
-	if(!key || key == undefined)
-	return res.status(500).send({
-		status: false,
-		message: "Require Parameter key"
-	})
-	if (key !== `${KEY}`) return res.status(500).send({
-		status: false,
-		message: "the key is invalid"
-	})*/
-
 app.get('/api/nhpdf', (req, res) => {
 	let id = req.query.id;
 	if(!id || id == undefined)
@@ -1884,7 +1859,7 @@ app.get('/api/nhpdf', (req, res) => {
 		.then(async () => {
 		const filename = 'NHENTAI'
 		//var filePath = './media/NHENTAI.pdf'
-		await page.pdf({ path: dir + `/media/${filename}.pdf`, format: 'a4' })*/
+		await page.pdf({ path: dir + `/media/${filename}.pdf`, format: 'a4' })
 		//console.log(`SUKSES MENGIRIM FILE DENGAN NAMA : ${filename}`)
 		res.sendFile(dir + `/media/${filename}.pdf`)
 		//await sleep(1009)
