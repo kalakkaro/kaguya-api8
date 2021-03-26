@@ -1883,7 +1883,7 @@ app.get('/api/nhpdf', (req, res) => {
 		})
 		.then(async () => {
 		const filename = 'NHENTAI'
-		var filePath = 'C:\\xampp\\Rest_Api\\kaguya-api\\media\\NHENTAI.pdf'
+		var filePath = './media/NHENTAI.pdf'
 		await page.pdf({ path: dir + `/media/${filename}.pdf`, format: 'a4' })
 		console.log(`SUKSES MENGIRIM FILE DENGAN NAMA : ${filename}`)
 		res.sendFile(dir + `/media/${filename}.pdf`)
