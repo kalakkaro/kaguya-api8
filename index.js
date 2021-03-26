@@ -1885,8 +1885,8 @@ app.get('/api/nhpdf', (req, res) => {
 		const filename = 'NHENTAI'
 		//var filePath = './media/NHENTAI.pdf'
 		await page.pdf({ path: dir + `/media/${filename}.pdf`, format: 'a4' })*/
-		console.log(`SUKSES MENGIRIM FILE DENGAN NAMA : ${filename}`)
-		res.sendFile(dir + `/media/${filename}.pdf`)
+		//console.log(`SUKSES MENGIRIM FILE DENGAN NAMA : ${filename}`)
+		res.sendFile(dir + `/media/NHENTAI.pdf`)
 		//await sleep(1009)
 		//console.log(`SUKSES DELETE FILE : ${filePath}`)
 		//fs.unlinkSync(filePath)
