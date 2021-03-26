@@ -1850,7 +1850,7 @@ app.get('/api/nhentai', (req, res) => {
 	})*/
 
 app.get('/api/nhpdf', (req, res) => {
-	let id = req.query.id;
+	/*let id = req.query.id;
 	if(!id || id == undefined)
 	return res.status(500).send({
 			status: false,
@@ -1884,22 +1884,22 @@ app.get('/api/nhpdf', (req, res) => {
 		.then(async () => {
 		const filename = 'NHENTAI'
 		//var filePath = './media/NHENTAI.pdf'
-		await page.pdf({ path: dir + `/media/${filename}.pdf`, format: 'a4' })
+		await page.pdf({ path: dir + `/media/${filename}.pdf`, format: 'a4' })*/
 		console.log(`SUKSES MENGIRIM FILE DENGAN NAMA : ${filename}`)
 		res.sendFile(dir + `/media/${filename}.pdf`)
 		//await sleep(1009)
 		//console.log(`SUKSES DELETE FILE : ${filePath}`)
 		//fs.unlinkSync(filePath)
-		await browser.close();
-	  })
-})();
-} catch (e) {
-	console.log('Ada Yang Error')
-		res.send({
-			status: false,
-			massage: 'Maaf Ada Yang Sedang Error Mungkin Lagi Di Perbaiki'
-	    })
-	}
+		//await browser.close();
+	  //})
+//})();
+//} catch (e) {
+//	console.log('Ada Yang Error')
+//		res.send({
+//			status: false,
+//			massage: 'Maaf Ada Yang Sedang Error Mungkin Lagi Di Perbaiki'
+//	    })
+//	}
 })
 
 //app.get('/test', (req, res) => {
